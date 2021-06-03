@@ -1,2 +1,3 @@
-# programacion-basada-componentes
-Repositorio para programacion basada en componentes
+# Programacion basada en componentes
+
+- Creacion de tres componentes visuales: Button, Card, ???
