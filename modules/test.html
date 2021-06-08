@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <script type="module" src="./js/Card/card.js"></script>
+        <script type="module" src="./js/scripts/card_test.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card component test</title>
+    </head>
+
+    <body>
+        <h3>Colors</h3>
+        <input type="radio" name="color" value="rgb(240, 238, 238)" id="originalColor" />
+        <label for="originalColor">Default</label>
+        <input type="radio" name="color" value="skyblue" id="skyColor" />
+        <label for="skyColor">Sky blue</label>
+        <input type="radio" name="color" value="lime" id="limeColor" />
+        <label for="limeColor">Lime</label>
+        <h3>Dimensions</h3>
+        <input type="text" id="widthInput" placeholder="px, %, in, cm, etc..." />
+        <label for="widthInput">Width</label>
+        <input type="text" id="heightInput" placeholder="px, %, in, cm, etc..." />
+        <label for="heightInput">Height</label>
+        <button id="setDimensionBtn">Set dimensions</button>
+        <h3>Position</h3>
+        <input type="text" id="topInput" placeholder="px, %, in, cm, etc..." />
+        <label for="topInput">Top</label>
+        <input type="text" id="leftInput" placeholder="px, %, in, cm, etc..." />
+        <label for="leftInput">Left</label>
+        <button id="setPositionBtn">Set position</button>
+        <br/>
+        <card-element>
+            <img 
+            src="https://i.pinimg.com/originals/4e/fd/71/4efd71eefc07297de5d5894b396eac05.jpg"/>
+            <h2>Lorem ipsum</h2>
+            <h4>dolor sit amet</h4>
+            <button>Button</button>
+        </card-element>
+    </body>
+</html>
