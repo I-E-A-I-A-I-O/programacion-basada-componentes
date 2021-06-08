@@ -1,9 +1,30 @@
 export default class Base extends HTMLElement {
     constructor() {
         super();
-        this.style.display = "inline-block"
-        this.style.position = "relative"
-        this.style.textAlign = "center"
+    }
+    set boxShadow(boxShadow) {
+        this.style.boxShadow = boxShadow
+    }
+    get boxShadow() {
+        return this.boxShadow
+    }
+    get display() {
+        return this.style.display
+    }
+    set display(display) {
+        this.style.display = display
+    }
+    get position() {
+        return this.style.position
+    }
+    set position(position) {
+        this.style.position = position
+    }
+    set textAlign(textAlign) {
+        this.style.textAlign = textAlign
+    }
+    get textAlign() {
+        return this.style.textAlign
     }
     get Container() {
         return this;
@@ -55,5 +76,11 @@ export default class Base extends HTMLElement {
     }
     get padding() {
         return this.style.padding
+    }
+    set margin(margin) {
+        this.style.margin = margin
+    }
+    get margin() {
+        return this.style.margin
     }
 }

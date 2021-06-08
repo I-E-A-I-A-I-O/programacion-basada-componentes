@@ -3,26 +3,19 @@ import Base from "../Base/base.js";
 class Card extends Base {
     constructor() {
         super();
-        this._childrenRead = false
         this.top = "5%"
         this.left = "5%"
         this.padding = "2%"
         this.backgroundColor = "rgb(240, 238, 238)"
-        this.borderRadius = "5%"
-        this.attachShadow({mode: 'open'})
-        document.body.appendChild(this)
+        this.borderRadius = "1%"
+        this.display = "inline-block"
+        this.position = "relative"
+        this.textAlign = "center"
+        this.boxShadow = "0px 4px #868181"
+        this.margin = "1%"
     }
     connectedCallback() {
-        if (!this._childrenRead) {
-            this._childrenRead = true
-            if (this.hasChildNodes()) {
-                this.childNodes.forEach((value) => {
-                    if (value.nodeName != "#text") {
-                        this.shadowRoot.appendChild(value)
-                    }
-                })
-            }
-        }
+      
     }
 }
 
