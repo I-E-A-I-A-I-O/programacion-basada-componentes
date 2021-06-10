@@ -1,3 +1,3 @@
 # Programacion basada en componentes
 
-- Creacion de tres componentes visuales: Button, Card, ???
+- Creacion de tres componentes visuales: Button, Card, Check
