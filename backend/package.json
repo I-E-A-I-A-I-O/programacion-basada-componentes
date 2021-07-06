@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend para proyecto de programacion basada en componentes",
+  "main": "index.js",
+  "repository": "https://github.com/I-E-A-I-A-I-O/programacion-basada-componentes.git",
+  "author": "El grupo",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0"
+  }
+}
