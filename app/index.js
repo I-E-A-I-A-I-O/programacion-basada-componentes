@@ -9,6 +9,7 @@ const port = process.env.PORT || 8000
 app.use(Cors())
 app.use(Helmet())
 app.use(Express.json())
+app.use(Express.static('static'))
 
 app.use("", helloRouter)
 
