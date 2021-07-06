@@ -1,3 +1,5 @@
+import Net from "../Net/fetch-wrapper.js"
+
 function changeColor(color) {
     document.querySelector("card-element").backgroundColor = color
 }
@@ -26,8 +28,15 @@ function setPosition() {
     card.top = top
 }
 
+async function getHello() {
+    const net = new Net()
+    const response = await net.testGet()
+    document.querySelector("#hello-here").innerHTML = response.msg
+}
+
 document.querySelector("#originalColor").addEventListener("change", (ev) => changeColor(ev.target.value))
 document.querySelector("#skyColor").addEventListener("change", (ev) => changeColor(ev.target.value))
 document.querySelector("#limeColor").addEventListener("change", (ev) => changeColor(ev.target.value))
 document.querySelector("#setDimensionBtn").addEventListener("click", setDimensions)
 document.querySelector("#setPositionBtn").addEventListener("click", setPosition)
+document.querySelector("#helloBtn").addEventListener("click", getHello)
