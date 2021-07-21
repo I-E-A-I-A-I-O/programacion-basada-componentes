@@ -1,5 +1,7 @@
 import Net from "../Net/fetch-wrapper.js"
 
+const net = new Net()
+
 function changeColor(color) {
     document.querySelector("card-element").backgroundColor = color
 }
@@ -29,9 +31,18 @@ function setPosition() {
 }
 
 async function getHello() {
-    const net = new Net()
     const response = await net.testGet()
     document.querySelector("#hello-here").innerHTML = response.msg
+}
+
+async function helloReflection() {
+  const response = await net.post("sayHello")
+  document.querySelector("#hello-here").innerHTML = response.msg
+}
+
+async function byeReflection() {
+  const response = await net.post("sayBye")
+  document.querySelector("#hello-here").innerHTML = response.msg
 }
 
 document.querySelector("#originalColor").addEventListener("change", (ev) => changeColor(ev.target.value))
@@ -40,3 +51,5 @@ document.querySelector("#limeColor").addEventListener("change", (ev) => changeCo
 document.querySelector("#setDimensionBtn").addEventListener("click", setDimensions)
 document.querySelector("#setPositionBtn").addEventListener("click", setPosition)
 document.querySelector("#helloBtn").addEventListener("click", getHello)
+document.querySelector("#hiReflec").addEventListener("click", helloReflection)
+document.querySelector("#byeReflec").addEventListener("click", byeReflection)
