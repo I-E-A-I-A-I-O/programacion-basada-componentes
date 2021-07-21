@@ -4,7 +4,7 @@ const receiveRequest = (req, res) => {
     return res.status(400).json({msg: "Method not specified."})
   }
   try {
-    const msg = this["method"]()
+    const msg = this[method]()
     res.status(200).json({msg})
   } catch (e) {
     console.error(e)
