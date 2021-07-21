@@ -10,7 +10,7 @@ export default class Fetch {
         "method": "POST",
         "body": {method},
         "headers": {
-          "CONTENT-TYPE": "application/json"
+          "Content-Type": "application/json"
         }
       })
       return await response.json()
